@@ -1,0 +1,19 @@
+Dec 19, 2019 4:29:49 PM org.jenkinsci.remoting.util.AnonymousClassWarnings warn
+WARNING: Attempt to (de-)serialize anonymous class org.jenkinsci.plugins.gitclient.Git$1; see: https://jenkins.io/redirect/serialization-of-anonymous-classes/
+Dec 19, 2019 4:30:00 PM org.jenkinsci.remoting.util.AnonymousClassWarnings warn
+WARNING: Attempt to (de-)serialize anonymous class org.jenkinsci.plugins.gitclient.RemoteGitImpl$CommandInvocationHandler$1; see: https://jenkins.io/redirect/serialization-of-anonymous-classes/
+Dec 20, 2019 1:23:59 AM hudson.remoting.SynchronousCommandTransport$ReaderThread run
+INFO: I/O error in channel channel
+java.io.IOException: Unexpected termination of the channel
+	at hudson.remoting.SynchronousCommandTransport$ReaderThread.run(SynchronousCommandTransport.java:77)
+Caused by: java.io.EOFException
+	at java.io.ObjectInputStream$PeekInputStream.readFully(ObjectInputStream.java:2680)
+	at java.io.ObjectInputStream$BlockDataInputStream.readShort(ObjectInputStream.java:3155)
+	at java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:861)
+	at java.io.ObjectInputStream.<init>(ObjectInputStream.java:357)
+	at hudson.remoting.ObjectInputStreamEx.<init>(ObjectInputStreamEx.java:49)
+	at hudson.remoting.Command.readFrom(Command.java:140)
+	at hudson.remoting.Command.readFrom(Command.java:126)
+	at hudson.remoting.AbstractSynchronousByteArrayCommandTransport.read(AbstractSynchronousByteArrayCommandTransport.java:36)
+	at hudson.remoting.SynchronousCommandTransport$ReaderThread.run(SynchronousCommandTransport.java:63)
+
